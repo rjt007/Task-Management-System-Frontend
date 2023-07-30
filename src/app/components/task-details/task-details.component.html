@@ -1,0 +1,29 @@
+<div class="task-title">{{ task.title }}</div>
+<div class="task-title">Description - <span class="task-details">{{ task.description }}</span></div>
+<div class="task-details">
+  Due Date: {{ task.dueDate.substr(0,10) }} | Priority: {{ task.priority.toUpperCase() }} | Status:
+  {{ task.status.toUpperCase() }}
+</div>
+<div class="task-actions">
+  <div class="btn">
+    <input
+      type="button"
+      value="Start"
+      class="edit start"
+      (click)="updateTaskStatus(task._id, 'IN-PROGRESS')"
+    />
+    <input
+      type="button"
+      value="Complete"
+      class="edit"
+      (click)="updateTaskStatus(task._id, 'COMPLETED')"
+    />
+    <input
+      type="button"
+      value="Delete"
+      class="delete"
+      (click)="deleteTask(task._id)"
+    />
+  </div>
+  <div *ngIf="error">{{error}}</div>
+</div>

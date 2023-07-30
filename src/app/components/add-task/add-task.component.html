@@ -1,0 +1,40 @@
+<div class="container">
+  <h2>Add New Task</h2>
+  <form (ngSubmit)="addTask()">
+    <div class="form-group">
+      <label for="title">Title:</label>
+      <input [(ngModel)]="newTask.title" type="text" id="title" name="title" placeholder="Enter task title" required>
+    </div>
+    <div class="form-group">
+      <label for="description">Description:</label>
+      <textarea [(ngModel)]="newTask.description" id="description" name="description" placeholder="Enter task description" required></textarea>
+    </div>
+    <div class="form-group">
+      <label for="due-date">Due Date:</label>
+      <input [(ngModel)]="newTask.dueDate" type="date" id="due-date" name="due-date" required>
+    </div>
+    <div class="form-group">
+      <label for="priority">Priority:</label>
+      <select [(ngModel)]="newTask.priority" id="priority" name="priority" required>
+        <option value="low">Low</option>
+        <option value="medium">Medium</option>
+        <option value="high">High</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <label for="status">Status:</label>
+      <select [(ngModel)]="newTask.status" id="status" name="status" required>
+        <option value="TO-DO">TO DO</option>
+        <option value="IN-PROGRESS">IN PROGRESS</option>
+        <option value="COMPLETED">COMPLETED</option>
+      </select>
+    </div>
+    <div class="form-group">
+      <input type="submit" value="Add Task">
+    </div>
+  </form>
+  <a routerLink="/tasks"><button class="viewBtn">View Tasks</button></a>
+  <p style="color:red" *ngIf="error">{{error}}</p>
+</div>
+
+  

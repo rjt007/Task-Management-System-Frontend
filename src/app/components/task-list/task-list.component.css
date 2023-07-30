@@ -1,0 +1,57 @@
+.container {
+  width: 600px;
+  margin: 0 auto;
+  padding-top: 50px;
+}
+
+.task-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.task-list li {
+  border: 1px solid #ddd;
+  padding: 10px;
+  margin-bottom: 10px;
+  list-style: none;
+}
+
+.task-list li:hover {
+  background-color: #f5f5f5;
+}
+
+.sorting-options {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 10px;
+}
+
+label {
+  font-weight: bold;
+}
+
+select {
+  padding: 5px;
+}
+
+.csvBtn, .addBtn{
+    width: 25%;
+    margin-top: 10px;
+    margin-right: 10px;
+    padding: 8px;
+    background-color: #1b4c90;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+.addBtn{
+  background-color: #318f34;
+}
+.addBtn:hover{
+  background-color: #16731b;
+}
+.csvBtn:hover{
+  background-color: #0c3671;
+}

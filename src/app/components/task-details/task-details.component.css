@@ -1,0 +1,44 @@
+.task-title {
+  font-weight: bold;
+}
+
+.task-details {
+  color: #777;
+}
+
+.task-actions {
+  margin-top: 5px;
+}
+.btn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+.edit,
+.delete {
+  width: 25%;
+  margin-top: 10px;
+  margin-right: 10px;
+  padding: 8px;
+  background-color: #3b973e;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.edit:hover {
+  background-color: #1f8824;
+}
+
+.start {
+  background-color: rgb(128, 128, 12);
+}
+.start:hover {
+  background-color: rgb(100, 100, 41);
+}
+.delete {
+  background-color: rgb(236, 94, 94);
+}
+.delete:hover {
+  background-color: rgb(199, 54, 54);
+}
