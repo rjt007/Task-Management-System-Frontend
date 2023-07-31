@@ -12,6 +12,8 @@ import { TaskDetailsComponent } from './components/task-details/task-details.com
 import { SignupComponent } from './components/signup/signup.component';
 import { LoginComponent } from './components/login/login.component';
 import { TaskHomeComponent } from './components/task-home/task-home.component';
+import { ForgetComponent } from './components/forget/forget.component';
+import { NotFoundComponent } from './components/not-found/not-found.component';
 
 @NgModule({
   declarations: [
@@ -21,7 +23,9 @@ import { TaskHomeComponent } from './components/task-home/task-home.component';
     TaskDetailsComponent,
     SignupComponent,
     LoginComponent,
-    TaskHomeComponent
+    TaskHomeComponent,
+    ForgetComponent,
+    NotFoundComponent
   ],
   imports: [
     BrowserModule,

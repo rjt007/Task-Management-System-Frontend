@@ -33,8 +33,9 @@
       <input type="submit" value="Add Task">
     </div>
   </form>
-  <a routerLink="/tasks"><button class="viewBtn">View Tasks</button></a>
+  <a routerLink="/tasks"><button class="viewBtn">View Tasks</button></a><br><br>
   <p style="color:red" *ngIf="error">{{error}}</p>
+  <p style="color:green" *ngIf="added">{{added}}</p>
 </div>
 
   

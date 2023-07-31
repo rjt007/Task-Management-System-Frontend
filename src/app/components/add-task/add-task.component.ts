@@ -10,13 +10,19 @@ import { TaskService } from '../../services/task.service';
 export class AddTaskComponent {
   newTask: Task = new Task();
   error:string = '';
+  added:string='';
 
   constructor(private taskService: TaskService) {
   }
   addTask() {
     this.taskService.addTask(this.newTask).subscribe({
+      complete: ()=>this.added = 'Task added successfully!',
       error:(err)=>this.error = err.error
     });
     this.newTask = new Task();
+    setTimeout(()=>{
+      this.error = '';
+      this.added='';
+    },4000);
   }
 }

@@ -26,6 +26,10 @@ export class UserService {
       })
     );
   }
+  //Forget Password
+  forget(credentials: User): Observable<any> {
+    return this.http.put<any>(this.apiUrl+'/forget', credentials);
+  }
   private storeToken(token: string) {
     localStorage.setItem('jwtToken', token);
   }
